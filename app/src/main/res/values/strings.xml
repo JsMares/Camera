@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Camera</string>
+
+    <string name="save_database">GUARDAR EN BASE DE DATOS</string>
+    <string name="save_firebase">GUARDAR EN FIREBASE</string>
+    <string name="save_dataRoom">GUARDAR EN ROOM</string>
+    <string name="save_externalMemory">GUARDAR EN MEMORIA EXTERNA</string>
 </resources>
