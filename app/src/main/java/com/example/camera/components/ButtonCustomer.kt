@@ -12,6 +12,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -28,7 +29,7 @@ fun ButtonCustomer(text: String, icon: Int, onClick: () -> Unit) {
         colors = ButtonDefaults.buttonColors(Color.Black),
         contentPadding = PaddingValues(vertical = 16.dp)
     ) {
-        Row {
+        Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(painter = painterResource(id = icon), contentDescription = "")
             Spacer(modifier = Modifier.size(16.dp))
             Text(text = text)

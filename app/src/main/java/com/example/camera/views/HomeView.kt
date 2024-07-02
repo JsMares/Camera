@@ -3,9 +3,12 @@ package com.example.camera.views
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -17,14 +20,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.camera.R
 import com.example.camera.components.ButtonCustomer
+import com.example.camera.components.OutlinedButtonCustomer
 
 @Preview(showBackground = true)
 @Composable
 fun HomeView() {
     Box(modifier = Modifier.fillMaxSize()) {
         ImageCustomer(modifier = Modifier.align(Alignment.TopCenter))
-
         Column(modifier = Modifier.align(Alignment.BottomCenter)) {
+            SelectorButtons()
+            Spacer(modifier = Modifier.size(96.dp))
             SaveButtons()
         }
     }
@@ -41,6 +46,18 @@ fun ImageCustomer(modifier: Modifier) {
             .width(250.dp),
         contentScale = ContentScale.Fit
     )
+}
+
+@Composable
+fun SelectorButtons() {
+    Row {
+        OutlinedButtonCustomer(modifier = Modifier.weight(1f), text = stringResource(id = R.string.indication_takePhoto), icon = R.drawable.baseline_photo_camera_24) {
+
+        }
+        OutlinedButtonCustomer(modifier = Modifier.weight(1f), text = stringResource(id = R.string.indication_selectImage), icon = R.drawable.baseline_photo_24) {
+
+        }
+    }
 }
 
 @Composable

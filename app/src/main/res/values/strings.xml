@@ -5,4 +5,7 @@
     <string name="save_firebase">GUARDAR EN FIREBASE</string>
     <string name="save_dataRoom">GUARDAR EN ROOM</string>
     <string name="save_externalMemory">GUARDAR EN MEMORIA EXTERNA</string>
+
+    <string name="indication_takePhoto">TOMAR FOTO</string>
+    <string name="indication_selectImage">SELECCIONAR IMAGEN</string>
 </resources>
